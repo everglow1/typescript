@@ -57,3 +57,61 @@ myArray = ['bob', 'fred'];
 
 let myStr: string = myArray[0];
 
+// class Animal {
+// 	name: string;
+// }
+// class Dog extends Animal {
+// 	bred: string
+// }
+
+// interface ClockInterface {
+// 	currentTime: Date;
+// }
+// class Clock implements ClockInterface {
+// 	currentTime: Date;
+// 	constructor(h: number, m: number) {}
+// }
+
+// interface ClockInterface {
+// 	currentTime: Date;
+// 	setTime(d: Date): void;
+// }
+
+// class Clock implements ClockInterface {
+// 	currentTime: Date;
+// 	constructor() {
+// 		this.currentTime = new Date()
+// 	}
+// 	setTime(d: Date) {
+// 		this.currentTime = d;
+// 	}
+// }
+
+// interface Shape {
+// 	color: string;
+// }
+
+// interface Square extends Shape {
+// 	sideLength: number;
+// }
+
+// let square= <Square>{};
+// square.color = "blue";
+// square.sideLength = 10;
+
+interface Counter {
+	(start: number): string;
+	interval: number;
+	reset(): void;
+}
+
+function getCounter(): Counter {
+	let counter = <Counter>function (start: number) {
+	}
+	counter.interval = 123;
+	counter.reset = function() {
+
+	}
+	return counter
+}
+
