@@ -1,3 +1,4 @@
+"use strict";
 function filterByTerm(input, searchTerm) {
     if (!searchTerm)
         throw Error("searchTerm 不能为空");
