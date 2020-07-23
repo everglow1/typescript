@@ -110,3 +110,132 @@
 // function getCacheData(key: string): any {
 //   return (window as any).caches[key];
 // }
+
+// type EventName = 'click' | 'scroll' | 'mousemove';
+// function handleEvent(ele: EventName, event: EventName) {
+
+// }
+
+// let tom: [string, number];
+// enum Days {Sun, Mon, Tue, Wed, Fri, Sat}
+
+// console.log(Days['Sun'] === 0)
+// console.log(Days['Mon'] === 1)
+
+// const enum Directions {
+//   Up,
+//   Down,
+//   Left,
+//   Right
+// }
+
+// let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
+
+// interface Alarm {
+//   alert(): void;
+// }
+
+// interface Light {
+//   lightOn(): void;
+//   lightOff(): void;
+// }
+
+// class Door {
+
+// }
+
+// class SecurityDoor extends Door implements Alarm {
+//   alert() {
+//     console.log('SecurityDoor alert');
+//   }
+// }
+
+// class Car implements Alarm, Light {
+//   alert() {
+//     console.log('Car alert')
+//   }
+//   lightOn() {
+
+//   }
+//   lightOff() {
+
+//   }
+// }
+
+// class Point {
+//   x: number;
+//   y: number;
+//   constructor(x: number, y: number) {
+//     this.x = x;
+//     this.y = y;
+//   }
+// }
+
+// interface Point3d extends Point {
+
+// }
+
+// function createArray(length: number, value: any): Array<number> {
+//   let result: Array<number> = [];
+//   for(let i = 0; i < length; i++) {
+//     result[i] = value;
+//   }
+//   return result;
+// }
+// createArray(2, 'x')
+
+// function createArray<T>(length: number, value: T): Array<T> {
+//   let result: T[] = [];
+//   for(let i = 0; i < length; i++) {
+//     result[i] = value;
+//   }
+//   return result;
+// }
+// createArray(3, 'xxx')
+
+
+// function swap<T, U>(tuple: [T, U]): [U, T] {
+//   return [tuple[1], tuple[0]]
+// }
+
+// interface Lengthwise {
+//   length: number;
+// }
+
+// function loggingIdentity<T extends Lengthwise>(arg: T): T {
+//   return arg;
+// }
+
+// interface SearchFunc {
+//   (source: string, subString: string): boolean;
+// }
+
+// let mySearchs: SearchFunc;
+// mySearch = function(source: string, subString: string) {
+//   return source.search(subString) !== -1;
+// }
+
+// interface CreateArrayFunc {
+//   <T>(length: number, value: T): Array<T>;
+// }
+// let createArray: CreateArrayFunc;
+// createArray = function<T>(length: number, value: T): Array<T> {
+//   let result: T[] = [];
+//   for(let i = 0; i < length; i++) {
+//     result[i] = value;
+//   }
+//   return result;
+// }
+
+// interface CreateArrayFunc<T> {
+//   (length: number, value: T): Array<T>;
+// }
+
+// let createArray: CreateArrayFunc<any>;
+// createArray = function<T>(length: number, value: T): Array<T> {
+//   let result: T[] = [];
+//   return result
+// }
+
+class GenericNumber{
+}
