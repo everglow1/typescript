@@ -93,3 +93,4 @@
 // 	}
 // }
 
+let body: HTMLElement = document.body;
