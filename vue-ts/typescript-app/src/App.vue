@@ -1,20 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld :msg="msg"/>
+    <component-a msg="I am A"></component-a>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
+import ComponentA from './components/component-a.vue';
 
 @Component({
   components: {
     HelloWorld,
+    ComponentA,
   },
 })
-export default class App extends Vue {}
+
+export default class App extends Vue {
+  private msg: string = 'Welcome to my app';
+  private list: object[] = [
+    {
+      name: 'You',
+      age: '10',
+    },
+    {
+      name: 'Job',
+      age: '11',
+    },
+  ];
+}
 </script>
 
 <style>
