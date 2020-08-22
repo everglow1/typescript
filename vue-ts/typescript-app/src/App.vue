@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from 'vue-property-decorator';
+import { Component, Vue, Watch, Mixins } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import ComponentA from './components/component-a.vue';
 

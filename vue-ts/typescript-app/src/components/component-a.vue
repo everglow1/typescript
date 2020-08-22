@@ -1,15 +1,16 @@
 <template>
   <div class="a">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Mixins } from 'vue-property-decorator';
+import ProjectMixin from '../mixins/ProjectMixin';
 
 @Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+export default class Project extends Vue {
+  private msg: string = "我是A"
 }
 </script>
 
