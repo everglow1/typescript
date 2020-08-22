@@ -92,9 +92,9 @@ export default class App extends Vue {
   }
 
   // 生命周期钩子， 自动调用，所以不接受参数，也不返回任何数据类型
-  private mounted() {
-    alert('mounted');
-  }
+  // private mounted() {
+  //   alert('mounted');
+  // }
 
 }
 </script>

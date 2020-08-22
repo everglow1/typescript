@@ -7,10 +7,11 @@
 <script lang="ts">
 import { Component, Prop, Vue, Mixins } from 'vue-property-decorator';
 import ProjectMixin from '../mixins/ProjectMixin';
+import { namespace } from 'vuex-class';
 
 @Component
 export default class Project extends Vue {
-  private msg: string = "我是A"
+  private msg: string = '我是A';
 }
 </script>
 
