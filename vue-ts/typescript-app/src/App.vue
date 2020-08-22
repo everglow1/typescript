@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld @reset-data="method2" :msg="msg"/>
+    <HelloWorld @reset-count="method2" :msg="msg"/>
     <component-a msg="I am A"></component-a>
     <div @click="clickMe">{{fullPrice}}</div>
     <div>{{name}}</div>
@@ -83,14 +83,19 @@ export default class App extends Vue {
     this.name = 'KKK';
   }
 
-  public someMethods(n: number) {
+  private someMethods(n: number) {
     this.num = n;
   }
 
-  public method2(n: number) {
-    console.log('nnnnnn', n);
+  private method2(n: number) {
     this.num = n;
   }
+
+  // 生命周期钩子， 自动调用，所以不接受参数，也不返回任何数据类型
+  private mounted() {
+    alert('mounted');
+  }
+
 }
 </script>
 

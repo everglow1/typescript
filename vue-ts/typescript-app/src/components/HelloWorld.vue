@@ -4,7 +4,7 @@
     <h2>{{ age }}</h2>
     <h2>{{ address }}</h2>
     <h2>{{ jobb }}</h2>
-    <div @click="resetCount">点击我</div>
+    <div @click="testMethod">点击我</div>
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default class HelloWorld extends Vue {
   @Prop({ default: 10 }) private readonly age!: number;
   @Prop({ type: String }) private readonly address!: string;
   @Prop({ required: false, type: String, default: 'Developer' }) private readonly jobb!: string;
-  
   private count: number = 1;
 
   @Emit()
@@ -28,9 +27,13 @@ export default class HelloWorld extends Vue {
   }
 
   // 显式传递
-  @Emit('resetData')
+  @Emit()
   public resetCount() {
     return 20;
+  }
+
+  private testMethod(): void {
+    this.resetCount();
   }
 }
 </script>
