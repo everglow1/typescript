@@ -11,7 +11,12 @@
 <script lang="ts">
 import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'HelloWorld',
+  components: {
+    HelloWorld
+  }
+})
 export default class HelloWorld extends Vue {
   private name: string = '我是一个子组件';
 
